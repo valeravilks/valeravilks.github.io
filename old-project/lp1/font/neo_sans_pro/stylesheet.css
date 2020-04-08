@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'Neo Sans Pro';
+	src: url('NeoSansPro-Medium.eot');
+	src: local('Neo Sans Pro Medium'), local('NeoSansPro-Medium'),
+		url('NeoSansPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('NeoSansPro-Medium.woff') format('woff'),
+		url('NeoSansPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Neo Sans Pro';
+	src: url('NeoSansPro-Bold.eot');
+	src: local('Neo Sans Pro Bold'), local('NeoSansPro-Bold'),
+		url('NeoSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('NeoSansPro-Bold.woff') format('woff'),
+		url('NeoSansPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="tabs_new">
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <th>Наименование услуги</th>
+                <th>Выбор</th>
+            </tr>
+            <tr>
+                <td>Соличество секций</td>
+                <td>
+                    <input type="number" min="1" v-model="numberSex">
+                </td>
+            </tr>
+            <tr v-for="(value, key) in calcData">
+                <td>{{ value.name }}</td>
+                <td>
+                    <input v-if="showCheck(value)" type="checkbox" v-model="value.checkbox">
+                    <input v-if="radioCheck(value)"
+                           :name="Object.keys(value.radio)[0]"
+                           :value="key"
+                           type="radio"
+                           @click="connect(key, value)"
+
+                           v-model="picked[Object.keys(value.radio)[0]]"
+                    >
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+     {{ moneySum() }}
+
+
+ </div>
+</body>
+</html>

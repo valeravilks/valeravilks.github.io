@@ -1,0 +1,90 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px; }
+
+  .owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+
+.owl-next:focus, .owl-prev:focus{
+  outline: none;
+}
+.owl-next, .owl-prev{
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+.owl-next:hover, .owl-prev:hover{
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.owl-next{
+  position: absolute;
+  right: 0;
+
+}
+.owl-prev{
+  position: absolute;
+  left: 0;
+
+}
+.technology .owl-carousel .owl-stage-outer{
+  max-width: 900px;
+  margin: 0 auto;
+} 
+@media (max-width: 1200px) {
+  .technology .owl-carousel .owl-stage-outer{
+     max-width: 700px;
+  }
+}
+@media (max-width: 992px) {
+  .owl-next, .owl-prev{
+    display: none!important;
+  } 
+}
+.owl-dot{
+  height: 25px;
+  width: 25px;
+  background: radial-gradient(11.10px at 50% 50.49%, #1976D2 0%, #65CCF2 100%)!important;
+  transform: scale(0.5);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 14px;
+}
+.owl-dot:focus{
+  outline: none;
+}
+.feedback .owl-dots .active{
+  transform: scale(1);
+
+}
+
+.feedback .owl-dots{
+  display: flex;
+  justify-content: center;
+}
+
+

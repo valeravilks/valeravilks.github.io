@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Разработка сайтов от разработчика Валерия Вилькса</title>
+    <meta id="vp" name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="SanFrancisco/stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://valeravilks.ru/wp-content/uploads/2018/08/cropped-logo2-32x32.png" sizes="32x32" />
+</head>
+<body>
+<main>
+ <div class="back">
+     <div class="image">
+
+     </div>
+     <div class="content">
+        <div class="text1">
+            Валерий Вилькс - программист
+        </div>
+
+         <div class="text2">
+             Разработка  Landing Page от 10000 р.
+         </div>
+         <div class="img__small"></div>
+         <div class="block2 m50">
+             <div class="row1">
+                 <div class="left">
+                     Мои преимущества
+                 </div>
+                 <div class="right">
+                     <div class="item">
+                         <div class="line"></div>
+                         <div class="head">Пошаговый план разработки</div>
+                     </div>
+                     <div class="item">
+                         <div class="line"></div>
+                         <div class="head">Современный минималистичный дизайн</div>
+                     </div>
+                     <div class="item">
+                         <div class="line"></div>
+                         <div class="head">Вертска на HTML, CSS, JS, jQuery</div>
+                     </div>
+                     <div class="item">
+                         <div class="line"></div>
+                         <div class="head">Скорость загрузки до 3 секунд</div>
+                     </div>
+                     <div class="item">
+                         <div class="line"></div>
+                         <div class="head">Адекватные цены и  сроки</div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="block2 mb ">
+             <div class="row1">
+                 <div class="left">
+                     <div class="block33">
+                         Оставьте свой телефон и я отвечу на все Ваши вопросы
+                     </div>
+                 </div>
+                 <div class="right">
+                     <div class="item2 ajax">
+                         <div class="line"></div>
+                         <form action="" id="form" class="form">
+                             <input type="text" name="phone" class="phone" placeholder="Телефон *">
+                             <button class="button">></button>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $('button').click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: 'send.php',
+            data: {
+                phone: $('.phone').val()
+            },
+            success: function(){
+
+                $('.form').remove();
+                $('.ajax').append('<div> Телефон успешно отправлен </div>');
+
+            }
+        });
+    });
+</script>
+</body>
+</html>
